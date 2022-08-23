@@ -6,12 +6,12 @@
 		"@testing-library/jest-dom": "^5.14.1",
 		"@testing-library/react": "^11.2.7",
 		"@testing-library/user-event": "^12.8.3",
+		"contracts": "file:./truffle/build/contracts",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-scripts": "4.0.3",
 		"web-vitals": "^1.1.2",
-		"web3": "^1.5.2",
-		"contracts": "file:./truffle/build/contracts"
+		"web3": "^1.5.2"
 	},
 	"scripts": {
 		"start": "react-scripts start",
@@ -36,5 +36,10 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.8",
+		"postcss": "^8.4.16",
+		"tailwindcss": "^3.1.8"
 	}
 }

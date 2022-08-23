@@ -36,7 +36,37 @@ export const init = async () => {
 
     console.log('votesCOntract: ', votesContract)
 
-    const votes = await votesContract.methods.getVotes('btc-eth').call();
+    let options = {
+      filter: {
+          // value: [],
+      },
+      fromBlock: 27578100,
+      toBlock: 'latest'
+  };
+  
+
+  const pastEvents = await votesContract.getPastEvents('tickerupdated', options)
+    .then(response => {
+      console.log('response past events: ', response)
+      return response
+    })
+    
+    const getAllEvents = await votesContract.events.allEvents();
+    console.log('getallEvents: ', getAllEvents)
+
+    const btcEthVotes = await votesContract.methods.getVotes('btc-eth').call();
+    const ethLinkVotes = await votesContract.methods.getVotes('eth-link').call();
+    const bnbSolVotes = await votesContract.methods.getVotes('bnb-sol').call();
+    const maticAvaxVotes = await votesContract.methods.getVotes('matic-avax').call();
+    
+    const votes = {
+      btcEth: btcEthVotes,
+      ethLink: ethLinkVotes,
+      bnbSol: bnbSolVotes,
+      maticAvax: maticAvaxVotes,
+    }
 
     console.log('votes: ', votes)
+    console.log('pastEvents: ', pastEvents)
+    return pastEvents
 }
