@@ -19,7 +19,7 @@ const App = () => {
     <>
       <div className="App">
         <div>
-          <h1>polyVote</h1>
+          <h1 className='underline'>polyVote</h1>
         </div>
       </div>
     </>
