@@ -10,6 +10,7 @@ import polygonLogo from './assets/polygon.png'
 import avalanceLogo from './assets/avalanche.png';
 import Card from './components/card';
 import { shortenAddress } from './utils/shortenAddress';
+import { FaCheck } from 'react-icons/fa'
 const { ethereum } = window;
 let btcEthVoteFlag;
 let ethLinkVoteFlag;
@@ -177,7 +178,7 @@ const connectWallet = async (setAccount) => {
     <>
       <div className="App app-background h-[200vh]">
       <div className='header shadow-lg  white-glassmorphism p-3 pb-8 sticky top-0 z-10'>
-        <h1 className='text-5xl'>polyVote</h1>
+        <h1 className="text-5xl">polyVote</h1>
       </div>
         <div className='flex flex-col justify-center md:flex-row'>
           <div className='shadow-xl m-4'>
@@ -194,15 +195,18 @@ const connectWallet = async (setAccount) => {
             </button>
             ))}
             {(account && (
-              <div className='text-white mb-2 shadow-xl p-6 rounded'>Wallet connected: <br/>{shortenAddress(account)}</div>
+              <>
+              <FaCheck className='mt-2 mb-0' />
+              <div className="text-white mb-2 pt-2 shadow-xl p-6 rounded" style={{fontFamily: 'Cutive Mono', fontWeight: 500}}>Wallet connected: <br/>{shortenAddress(account)}</div>
+              </>
             ))}
           </div>
         </div>
      
         <div className='flex flex-col justify-center items-center min-h-screen pb-12'>
-          {/* {(!btceth && ( */}
-            {/* <div className='text-white text-4xl'>Loading...</div> */}
-          {/* ))} */}
+          {(!btceth && (
+            <div className='text-white text-4xl'>Loading...</div>
+          ))}
         <Card
         ticker={"btc-eth"}
         pair={btceth}
