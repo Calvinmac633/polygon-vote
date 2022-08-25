@@ -8,6 +8,7 @@
 		"@testing-library/react": "^11.2.7",
 		"@testing-library/user-event": "^12.8.3",
 		"contracts": "file:./truffle/build/contracts",
+		"ethers": "^5.7.0",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-scripts": "4.0.3",
@@ -41,6 +42,7 @@
 	"devDependencies": {
 		"autoprefixer": "^9.8.8",
 		"postcss": "^7.0.39",
+		"sass": "^1.54.5",
 		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
 	}
 }

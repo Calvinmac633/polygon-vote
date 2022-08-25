@@ -5,3 +5,40 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+:root {
+    --maticLight: rgb(156, 107, 239);
+    --matic: rgb(128,68,222);
+    --maticDark: rgb(103, 56, 184);
+    --maticDarker: rgb(85, 64, 153);
+  }
+
+  .header {
+    /* color: var(--maticDarker); */
+    text-shadow: 1px 1px 1px var(--matic),
+             1px 2px 1px var(--matic),
+             1px 3px 1px var(--matic),
+             1px 4px 1px var(--matic),
+             1px 5px 1px var(--matic),
+             1px 6px 1px var(--matic),
+             1px 10px 5px rgba(16, 16, 16, 0.5),
+             1px 15px 10px rgba(16, 16, 16, 0.4),
+             1px 20px 30px rgba(16, 16, 16, 0.3),
+             1px 25px 50px rgba(16, 16, 16, 0.2);
+}
+
+.white-glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  /* border-radius: 16px; */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.app-background {
+  background-color: var(--matic);
+  background-image: 
+    radial-gradient(at 0% 100%, rgb(177, 143, 238) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, rgb(156, 107, 239) 0, transparent 50%),
+    radial-gradient(at 75% 80%, rgb(116, 78, 181) 0, transparent 50%);
+}
