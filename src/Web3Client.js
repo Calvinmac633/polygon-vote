@@ -61,6 +61,7 @@ export const vote = async (ticker, upDown, currentAccount) => {
     await init();
   }
   const web3 = new Web3(provider);
+   // eslint-disable-next-line
   const networkId = await web3.eth.net.getId();
 
   const votesContract = new web3.eth.Contract(
