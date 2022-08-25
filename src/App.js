@@ -29,7 +29,6 @@ const App = () => {
 
   
 const connectWallet = async (setAccount) => {
-  console.log('connect?')
   try {
       if(!ethereum) return alert("Please install metamask!");
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
@@ -44,7 +43,6 @@ const connectWallet = async (setAccount) => {
 
   useEffect(() => {
     init().then((response) => {
-      console.log('RESPONSE: ', response)
       setAccount(response.selectedAccount)
       setVotes(response.pastEvents)
       const reverseEvents = response.pastEvents.slice().reverse();
@@ -56,7 +54,6 @@ const connectWallet = async (setAccount) => {
   }, []);
 
   async function getVotes(tick, setPair, pastEvents, selectedAccount) {
-    console.log('pastEvents: ', pastEvents)
     if (pastEvents && selectedAccount) {
       pastEvents.map((vote) => {
         if (vote.returnValues.voter.toUpperCase() === selectedAccount.toUpperCase()) {
@@ -80,7 +77,6 @@ const connectWallet = async (setAccount) => {
         return vote.returnValues
       })
       let pair = pastEvents.find(vote => vote.returnValues.ticker === tick)
-      // console.log('pair: ', pair)
       switch (pair.returnValues.ticker) {
         case 'btc-eth': 
           pair = {
