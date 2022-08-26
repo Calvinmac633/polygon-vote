@@ -5,7 +5,7 @@ Connect to Polygon Mumbai Testnet before starting!
 - [Get started with metamask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-started-with-MetaMask)
 - [How to add Polygon Mumbai to metamask](https://medium.com/stakingbits/how-to-connect-polygon-mumbai-testnet-to-metamask-fc3487a3871f#:~:text=Connect%20Metamask%20to%20Polygon%20Testnet,the%20Mumbai%20Testnet%20in%20Metamask.)
 
-![Screenshot]('./src/assets/polyVoteScreenshot.jpg')
+![Screenshot](./src/assets/polyVoteScreenshot.jpg)
 
 Vote on cryptocurrency pairs for which asset you believe will outperform in the future. 
 
