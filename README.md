@@ -9,6 +9,8 @@ Connect to Polygon Mumbai Testnet before starting!
 
 Vote on cryptocurrency pairs for which asset you believe will outperform in the future. 
 
+Deployed link: [Link](https://polyvote.netlify.app/)
+
 ### `npm run start`
 
 Runs the app in the development mode.\
